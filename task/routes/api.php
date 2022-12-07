@@ -20,3 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/getcount/s/{start_number}/e/{end_number}', [TaskController::class, 'getCount']);
+Route::get('/getalphacount/{input_string}', [TaskController::class, 'getAlphabetCount']);
