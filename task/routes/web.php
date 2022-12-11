@@ -18,5 +18,6 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', [OrdersController::class, 'create'])->name('orders.create');
+Route::get('/', [OrdersController::class, 'index'])->name('orders.index');
+Route::get('/create', [OrdersController::class, 'create'])->name('orders.create');
 Route::post('/order/store', [OrdersController::class, 'store'])->name('orders.store');

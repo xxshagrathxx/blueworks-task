@@ -17,7 +17,8 @@ class OrdersController extends Controller
      */
     public function index()
     {
-        //
+        $orders = Order::with('type')->get();
+        return view('orders.index', compact('orders'));
     }
 
     /**
@@ -74,7 +75,8 @@ class OrdersController extends Controller
             }
         }
 
-        return redirect()->route('orders.create');
+        toastr()->success('Order Saved Successfully');
+        return redirect()->route('orders.index');
     }
 
     /**
