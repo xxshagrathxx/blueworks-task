@@ -51,6 +51,7 @@ class TaskController extends Controller
         // return response()->json("Count of numbers between [" . $startNumber . "] and [" . $endNumber . "] excluding multiples of 5 is: [" . $count . "]");
     }
 
+    // This function holds the logic of removing five(s) from chunks of numbers like 100, 1000, 1000000, 1000000000, etc
     public function countOfFivesToMinus($range)
     {
         $result = 0;
